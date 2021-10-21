@@ -1,0 +1,20 @@
+.btns {
+  font-family: italic;
+  font-weight: 500;
+  font-size: 20px;
+  min-width: 60px;
+  height: 30px;
+  background-color: beige;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 15px 15px 7px rgb(138, 138, 138);
+}
+
+.btns:not(:last-child) {
+  margin-right: 15px;
+}
+
+.btns:hover,
+.btns:focus {
+  background-color: rgb(41, 179, 224);
+}
