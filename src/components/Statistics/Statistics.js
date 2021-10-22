@@ -7,8 +7,8 @@ function Statistics({ good, neutral, bad, total, percentage }) {
         <li>Good: {good}</li>
         <li>Neutral: {neutral}</li>
         <li>Bad: {bad}</li>
-        <li>Total: {total}</li>
-        <li>Positive feedback: {percentage} %</li>
+        <li>Total: {total(good,neutral,bad)}</li>
+        <li>Positive feedback: {percentage(good,neutral,bad)} %</li>
       </ul>
     </>
   );
@@ -17,7 +17,7 @@ Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  percentage: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  percentage: PropTypes.func.isRequired,
 };
 export default Statistics;
